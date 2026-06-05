@@ -1,0 +1,154 @@
+<div class="pretext-oracle" aria-label="Kinetic typography signal field">
+  <canvas id="pretext-oracle-canvas" aria-hidden="true"></canvas>
+  <div class="pretext-oracle-overlay">
+    <span class="pretext-label">PRETEXT FIELD / STATIC CANVAS</span>
+    <strong>text becomes terrain</strong>
+    <p>Drag across the field. The corpus reflows around your cursor like a terminal aura.</p>
+  </div>
+</div>
+
+<script>
+  import { prepareWithSegments, layoutNextLineRange, materializeLineRange } from '@chenglou/pretext';
+
+  const canvas = document.getElementById('pretext-oracle-canvas');
+  const shell = canvas?.closest('.pretext-oracle');
+  const ctx = canvas?.getContext('2d');
+  const corpus = `NOCTURNE SIGNAL // public static surface // agent contracts // repo artifacts // dark cockpit // no tracking // no fake metrics // github pages // pretext field // verified deploy // inspect the stack // future agents read the contract first // signal over spectacle // systems you can inspect // handoff without theater // `.repeat(10);
+
+  if (canvas && shell && ctx) {
+    let dpr = Math.min(window.devicePixelRatio || 1, 2);
+    let w = 0;
+    let h = 0;
+    let pointer = { x: 0.68, y: 0.42 };
+    let target = { x: 0.68, y: 0.42 };
+    let prepared;
+    let font = '';
+    let last = 0;
+
+    const resize = () => {
+      const rect = shell.getBoundingClientRect();
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      w = Math.max(320, Math.floor(rect.width));
+      h = Math.max(360, Math.floor(rect.height));
+      canvas.width = Math.floor(w * dpr);
+      canvas.height = Math.floor(h * dpr);
+      canvas.style.width = `${w}px`;
+      canvas.style.height = `${h}px`;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      font = `${w < 520 ? 11 : 12}px "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace`;
+      prepared = prepareWithSegments(corpus, font);
+    };
+
+    const setTarget = (event) => {
+      const rect = shell.getBoundingClientRect();
+      const point = event.touches?.[0] || event;
+      target.x = Math.max(0, Math.min(1, (point.clientX - rect.left) / rect.width));
+      target.y = Math.max(0, Math.min(1, (point.clientY - rect.top) / rect.height));
+    };
+
+    shell.addEventListener('pointermove', setTarget);
+    shell.addEventListener('touchmove', setTarget, { passive: true });
+    window.addEventListener('resize', resize);
+
+    const widthAtY = (y, t) => {
+      const cx = pointer.x * w;
+      const cy = pointer.y * h;
+      const pulse = 0.88 + Math.sin(t * 0.0016) * 0.12;
+      const radius = Math.min(w, h) * 0.22 * pulse;
+      const dy = Math.abs(y - cy);
+      if (dy > radius) return { left: 24, width: w - 48 };
+      const cut = Math.sqrt(radius * radius - dy * dy);
+      const obstacleLeft = cx - cut - 18;
+      const obstacleRight = cx + cut + 18;
+      const leftLane = Math.max(24, obstacleLeft - 28);
+      const rightLaneLeft = Math.min(w - 24, obstacleRight + 28);
+      const leftWidth = Math.max(0, leftLane - 24);
+      const rightWidth = Math.max(0, w - rightLaneLeft - 24);
+      return rightWidth > leftWidth ? { left: rightLaneLeft, width: rightWidth } : { left: 24, width: leftWidth };
+    };
+
+    const drawGrid = (t) => {
+      ctx.save();
+      ctx.globalAlpha = 0.28;
+      ctx.strokeStyle = 'rgba(133, 243, 215, 0.16)';
+      ctx.lineWidth = 1;
+      const step = 38;
+      const drift = (t * 0.012) % step;
+      for (let x = -step + drift; x < w + step; x += step) {
+        ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, h); ctx.stroke();
+      }
+      for (let y = -step + drift; y < h + step; y += step) {
+        ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(w, y); ctx.stroke();
+      }
+      ctx.restore();
+    };
+
+    const draw = (t = 0) => {
+      const dt = Math.min(32, t - last || 16);
+      last = t;
+      pointer.x += (target.x - pointer.x) * Math.min(1, dt / 180);
+      pointer.y += (target.y - pointer.y) * Math.min(1, dt / 180);
+
+      ctx.clearRect(0, 0, w, h);
+      const gradient = ctx.createRadialGradient(pointer.x * w, pointer.y * h, 20, pointer.x * w, pointer.y * h, Math.min(w, h) * 0.72);
+      gradient.addColorStop(0, 'rgba(0, 217, 146, 0.24)');
+      gradient.addColorStop(0.34, 'rgba(113, 112, 255, 0.09)');
+      gradient.addColorStop(1, 'rgba(5, 5, 7, 0)');
+      ctx.fillStyle = '#050507';
+      ctx.fillRect(0, 0, w, h);
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, w, h);
+      drawGrid(t);
+
+      const cx = pointer.x * w;
+      const cy = pointer.y * h;
+      const radius = Math.min(w, h) * (0.19 + Math.sin(t * 0.0016) * 0.022);
+      ctx.save();
+      ctx.strokeStyle = 'rgba(0, 217, 146, 0.72)';
+      ctx.shadowColor = 'rgba(0, 217, 146, 0.72)';
+      ctx.shadowBlur = 18;
+      ctx.lineWidth = 1.4;
+      ctx.beginPath();
+      ctx.arc(cx, cy, radius, 0, Math.PI * 2);
+      ctx.stroke();
+      ctx.strokeStyle = 'rgba(247, 248, 248, 0.20)';
+      ctx.beginPath();
+      ctx.arc(cx, cy, radius * 0.58, 0, Math.PI * 2);
+      ctx.stroke();
+      ctx.restore();
+
+      ctx.font = font;
+      ctx.textBaseline = 'top';
+      let cursor = { segmentIndex: 0, graphemeIndex: 0 };
+      let y = 24;
+      const lineHeight = w < 520 ? 17 : 18;
+      let row = 0;
+      while (y < h - 24) {
+        const lane = widthAtY(y + lineHeight * 0.5, t);
+        if (lane.width < 56) { y += lineHeight; row++; continue; }
+        const range = layoutNextLineRange(prepared, cursor, lane.width);
+        if (!range) break;
+        const line = materializeLineRange(prepared, range);
+        const distance = Math.abs(y - cy) / Math.max(1, radius);
+        ctx.fillStyle = distance < 0.95 ? 'rgba(133, 243, 215, 0.92)' : row % 5 === 0 ? 'rgba(247, 248, 248, 0.50)' : 'rgba(184, 195, 222, 0.36)';
+        ctx.fillText(line.text, lane.left, y);
+        cursor = range.end;
+        y += lineHeight;
+        row++;
+      }
+
+      ctx.save();
+      const vignette = ctx.createRadialGradient(w / 2, h / 2, Math.min(w, h) * 0.2, w / 2, h / 2, Math.max(w, h) * 0.68);
+      vignette.addColorStop(0, 'rgba(0,0,0,0)');
+      vignette.addColorStop(1, 'rgba(0,0,0,0.72)');
+      ctx.fillStyle = vignette;
+      ctx.fillRect(0, 0, w, h);
+      ctx.restore();
+
+      requestAnimationFrame(draw);
+    };
+
+    resize();
+    requestAnimationFrame(draw);
+  }
+</script>

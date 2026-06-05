@@ -1,0 +1,163 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/global.css';
+import ArtifactGallery from '../components/ArtifactGallery.astro';
+import SearchIndex from '../components/SearchIndex.astro';
+import AgentRunLedger from '../components/AgentRunLedger.astro';
+import RoadmapBoard from '../components/RoadmapBoard.astro';
+import PretextOracle from '../components/PretextOracle.astro';
+---
+<BaseLayout title="Nocturne Signal" description="A dark techno-oracle GitHub Pages site for presenting projects, agent workflows, artifacts, and operating principles with verified static-site boundaries.">
+  <main>
+    <section class="hero cockpit-shell" id="top">
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="#top" aria-label="Nocturne Signal home"><span class="brand-mark">N</span><span>Nocturne Signal</span></a>
+        <div class="nav-links"><a href="#context">Context</a><a href="#panels">Panels</a><a href="#proof">Proof</a><a href="#boundaries">Boundaries</a></div>
+      </nav>
+
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Static AgentSite · product-cockpit recipe · no-payment mode</p>
+          <h1>Operate from the dark edge of the stack</h1>
+          <p class="hero-lede">Nocturne Signal is a static command surface for AI experiments, agent workflows, repo artifacts, and technical field notes — sharp enough to feel alive, but constrained enough to stay public-safe and deployable on GitHub Pages.</p>
+          <p class="workflow-lede">The page explains the user-facing workflow first, then gives reviewers the operating context, repo-local proof, and approval boundaries needed to evaluate the next step safely.</p>
+          <div class="hero-actions"><a class="button primary" href="#signal">Inspect the signal</a><a class="button secondary" href="https://github.com/castiliad/nocturne-signal">View source</a></div>
+        </div>
+
+        <aside class="cockpit-card hero-panel signal-panel" id="signal" aria-label="Nocturne Signal kinetic typography cockpit">
+          <div class="panel-header"><span class="pulse-dot" aria-hidden="true"></span><strong>pretext / signal</strong></div>
+          <PretextOracle />
+          <div class="status-stack compact-status"><div><span>Delivery</span><strong>Static GitHub Pages</strong></div>
+<div><span>Guardrails</span><strong>No analytics · no tracking · no fake proof</strong></div></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section split-section" id="context">
+      <div>
+        <div class="section-kicker">Operating context</div>
+        <h2>What decision this page helps visitors make</h2>
+      </div>
+      <div>
+        <p>A dark techno-oracle GitHub Pages site for presenting projects, agent workflows, artifacts, and operating principles with verified static-site boundaries.</p>
+        <p>Create a dark, edgy, technical GitHub Pages static site for a personal AI/operator lab. It should feel like a techno-oracle command center: xAI-style monochrome restraint, Linear-level precision, VoltAgent terminal energy, and one signature kinetic typography / pretext-inspired hero. It must remain static, public-safe, no analytics, no tracking, no fake metrics, and no fabricated endorsements.</p>
+      </div>
+    </section>
+
+    <section class="section evidence-strip" id="evidence-strip" aria-label="Copy evidence strip">
+      <div class="evidence-strip-heading">
+        <div class="section-kicker">Copy evidence strip</div>
+        <h2>Every strong line gets paired with a verifiable artifact.</h2>
+      </div>
+      <div class="evidence-strip-track">
+        <article class="evidence-strip-card">
+          <span class="evidence-strip-label">Claim 01</span>
+          <h3>Static GitHub Pages delivery</h3>
+          <p><strong>Evidence:</strong> Static deploy evidence — GitHub Pages publishes the built output and npm run verify:deploy checks the live URL after deployment.</p>
+        </article>
+
+        <article class="evidence-strip-card">
+          <span class="evidence-strip-label">Claim 02</span>
+          <h3>Public-safe artifact and project presentation</h3>
+          <p><strong>Evidence:</strong> Agent contracts — .agent/site.contract.yaml and .agent/brand.contract.yaml define the mission, allowed claims, forbidden claims, visual posture, and approval boundaries.</p>
+        </article>
+
+        <article class="evidence-strip-card">
+          <span class="evidence-strip-label">Claim 03</span>
+          <h3>Repo-local QA and deploy verification</h3>
+          <p><strong>Evidence:</strong> Local QA gates — npm run qa and npm run qa:full validate contracts, claims, links, generated indexes, build output, and browser-visible behavior.</p>
+        </article>
+
+        <article class="evidence-strip-card">
+          <span class="evidence-strip-label">Claim 04</span>
+          <h3>Agent-maintainable contracts and runbooks</h3>
+          <p><strong>Evidence:</strong> Static deploy evidence — GitHub Pages publishes the built output and npm run verify:deploy checks the live URL after deployment.</p>
+        </article>
+      </div>
+    </section>
+
+    <ArtifactGallery />
+
+    <SearchIndex />
+
+    <RoadmapBoard />
+
+    <AgentRunLedger />
+
+    <section class="section audience" id="audience">
+      <div class="section-kicker">Audience named in the brief</div>
+      <h2>Built for the people who need the workflow explained clearly.</h2>
+      <ul><li>Technical collaborators reviewing AI/operator experiments</li>
+<li>Hiring or project leads who need a credible technical signal without marketing fluff</li>
+<li>Future agents maintaining the site from contracts, QA gates, and deploy evidence</li></ul>
+    </section>
+
+    <section class="section cockpit-grid-section" id="panels">
+      <div class="section-heading">
+        <div class="section-kicker">Cockpit panels</div>
+        <h2>Status, workflow, proof, and constraints in one scan.</h2>
+      </div>
+      <div class="cockpit-grid">
+        <article class="cockpit-card">
+          <span class="card-label">01 · Signal</span>
+          <h3>Signal over spectacle</h3>
+          <p>The site leads with a high-contrast command-center surface: terse copy, repo-backed proof, and a kinetic text field that feels technical instead of decorative.</p>
+        </article>
+
+        <article class="cockpit-card">
+          <span class="card-label">02 · Systems</span>
+          <h3>Systems you can inspect</h3>
+          <p>Project cards, artifact trails, run ledgers, and public-safe search surfaces make the site feel operational without pretending to stream live private telemetry.</p>
+        </article>
+
+        <article class="cockpit-card">
+          <span class="card-label">03 · Handoff</span>
+          <h3>Agent-maintainable by design</h3>
+          <p>Contracts, runbooks, QA scripts, and GitHub Pages verification give future agents a safe operating envelope for edits and deploys.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section artifact-section" id="proof">
+      <div class="section-heading">
+        <div class="section-kicker">Proof artifacts</div>
+        <h2>Evidence a future maintainer can verify.</h2>
+      </div>
+      <div class="artifact-grid">
+        <article>
+          <span class="artifact-path">Repo-verifiable artifact</span>
+          <h3>Static deploy evidence</h3>
+          <p>GitHub Pages publishes the built output and npm run verify:deploy checks the live URL after deployment.</p>
+        </article>
+
+        <article>
+          <span class="artifact-path">Repo-verifiable artifact</span>
+          <h3>Agent contracts</h3>
+          <p>.agent/site.contract.yaml and .agent/brand.contract.yaml define the mission, allowed claims, forbidden claims, visual posture, and approval boundaries.</p>
+        </article>
+
+        <article>
+          <span class="artifact-path">Repo-verifiable artifact</span>
+          <h3>Local QA gates</h3>
+          <p>npm run qa and npm run qa:full validate contracts, claims, links, generated indexes, build output, and browser-visible behavior.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section boundary-section" id="boundaries">
+      <div class="section-kicker">Boundaries</div>
+      <h2>What is not claimed here.</h2>
+      <div class="boundary-list"><p><strong>Not claimed:</strong> fake customer quoted endorsements.</p>
+<p><strong>Not claimed:</strong> fake usage metrics or benchmark numbers.</p>
+<p><strong>Not claimed:</strong> live private telemetry.</p>
+<p><strong>Approval required:</strong> Adding analytics, cookies, tracking pixels, or forms.</p>
+<p><strong>Approval required:</strong> Adding payment links, lead capture, or external scripts.</p>
+<p><strong>Approval required:</strong> Publishing private project details, customer names, or unsupported claims.</p></div>
+    </section>
+
+    <section class="section cta" id="cta">
+      <div><div class="section-kicker">Safe next step</div><h2>Inspect the signal</h2><p>Use the cockpit panels, repository contracts, and QA commands before changing claims, scope, payments, analytics, or deployment settings.</p></div>
+      <a class="button primary" href="#signal">Inspect the signal</a>
+    </section>
+  </main>
+</BaseLayout>

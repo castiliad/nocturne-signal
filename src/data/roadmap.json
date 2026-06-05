@@ -1,0 +1,74 @@
+[
+  {
+    "title": "Tighten recipe selection",
+    "status": "now",
+    "priority": "high",
+    "owner": "agent",
+    "tags": [
+      "recipes",
+      "qa"
+    ],
+    "summary": "Keep selector rules deterministic as more section recipes compose together.",
+    "nextStep": "Add a regression config whenever selector behavior changes."
+  },
+  {
+    "title": "Local-first user overrides",
+    "status": "next",
+    "priority": "high",
+    "owner": "agent",
+    "tags": [
+      "local-first",
+      "browser"
+    ],
+    "summary": "Let visitors locally move roadmap cards without implying shared task updates.",
+    "nextStep": "Use localStorage for browser-only status overrides and keep durable changes in JSON."
+  },
+  {
+    "title": "Static intelligence index",
+    "status": "later",
+    "priority": "medium",
+    "owner": "agent",
+    "tags": [
+      "search",
+      "data"
+    ],
+    "summary": "Generate precomputed indexes that make static sites feel more queryable.",
+    "nextStep": "Prototype a JSON index from recipe, artifact, and roadmap metadata."
+  },
+  {
+    "title": "Autonomous maintenance cadence",
+    "status": "blocked",
+    "priority": "medium",
+    "owner": "human",
+    "tags": [
+      "orchestration",
+      "approval"
+    ],
+    "summary": "Define when recurring agents may propose changes without adding notification noise.",
+    "nextStep": "Approve a quiet schedule and escalation boundaries before automation."
+  },
+  {
+    "title": "Static deploy evidence follow-up",
+    "status": "now",
+    "priority": "high",
+    "owner": "agent",
+    "tags": [
+      "proof",
+      "handoff"
+    ],
+    "summary": "GitHub Pages publishes the built output and npm run verify:deploy checks the live URL after deployment.",
+    "nextStep": "Keep this proof item linked to a real repo artifact before strengthening copy."
+  },
+  {
+    "title": "Agent contracts follow-up",
+    "status": "next",
+    "priority": "medium",
+    "owner": "agent",
+    "tags": [
+      "proof",
+      "handoff"
+    ],
+    "summary": ".agent/site.contract.yaml and .agent/brand.contract.yaml define the mission, allowed claims, forbidden claims, visual posture, and approval boundaries.",
+    "nextStep": "Keep this proof item linked to a real repo artifact before strengthening copy."
+  }
+]

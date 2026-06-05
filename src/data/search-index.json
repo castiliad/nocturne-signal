@@ -1,0 +1,338 @@
+[
+  {
+    "title": "Site contract",
+    "type": "contract",
+    "href": "#proof",
+    "summary": "Public source of truth for site mission, required sections, allowed claims, and approval boundaries.",
+    "tags": [
+      "contract",
+      "claims",
+      "approval"
+    ]
+  },
+  {
+    "title": "README handoff",
+    "type": "contract",
+    "href": "#top",
+    "summary": "Repository overview, selected recipes, live URL, QA commands, and agent maintenance notes.",
+    "tags": [
+      "handoff",
+      "repo",
+      "agents"
+    ]
+  },
+  {
+    "title": "Agent Run Ledger",
+    "type": "recipe",
+    "href": "#runs",
+    "summary": "A static orchestration ledger for agent-maintained sites: decisions, delegated",
+    "tags": [
+      "agent-run-ledger",
+      "section-recipe",
+      "recipe"
+    ]
+  },
+  {
+    "title": "AgentSite Atlas",
+    "type": "recipe",
+    "href": "#proof",
+    "summary": "A static directory of generated AgentSite proof sites, including live links,",
+    "tags": [
+      "agentsite-atlas",
+      "section-recipe",
+      "recipe"
+    ]
+  },
+  {
+    "title": "Artifact Gallery",
+    "type": "recipe",
+    "href": "#artifacts",
+    "summary": "A static, searchable, filterable gallery for repo artifacts, QA evidence,",
+    "tags": [
+      "artifact-gallery",
+      "section-recipe",
+      "recipe"
+    ]
+  },
+  {
+    "title": "Chief-of-staff briefing",
+    "type": "recipe",
+    "href": "#proof",
+    "summary": "Generates a public-safe executive briefing panel from static AgentSite data:",
+    "tags": [
+      "chief-of-staff-briefing",
+      "section-recipe",
+      "recipe"
+    ]
+  },
+  {
+    "title": "Copy Evidence Strip",
+    "type": "recipe",
+    "href": "#proof",
+    "summary": "A composable AgentSite pattern that pairs the strongest visible claims with",
+    "tags": [
+      "copy-evidence-strip",
+      "section-recipe",
+      "recipe"
+    ]
+  },
+  {
+    "title": "Editorial Ledger",
+    "type": "recipe",
+    "href": "#proof",
+    "summary": "A full-page AgentSite archetype for credibility-first narrative pages that read",
+    "tags": [
+      "editorial-ledger",
+      "archetype",
+      "recipe"
+    ]
+  },
+  {
+    "title": "Feature Request Inbox",
+    "type": "recipe",
+    "href": "#proof",
+    "summary": "A static intake queue for future AgentSite improvements with status, priority,",
+    "tags": [
+      "feature-request-inbox",
+      "section-recipe",
+      "recipe"
+    ]
+  },
+  {
+    "title": "Primary Surface Layout",
+    "type": "recipe",
+    "href": "#proof",
+    "summary": "Places the selected primary functional module immediately after the hero/context",
+    "tags": [
+      "primary-surface-layout",
+      "section-recipe",
+      "recipe"
+    ]
+  },
+  {
+    "title": "Product Cockpit",
+    "type": "recipe",
+    "href": "#proof",
+    "summary": "A reusable AgentSite pattern for turning a product, service, or internal initiative",
+    "tags": [
+      "product-cockpit",
+      "archetype",
+      "recipe"
+    ]
+  },
+  {
+    "title": "Roadmap Board",
+    "type": "recipe",
+    "href": "#roadmap",
+    "summary": "A static local-first improvement board for AgentSite repos. It renders a",
+    "tags": [
+      "roadmap-board",
+      "section-recipe",
+      "recipe"
+    ]
+  },
+  {
+    "title": "Search Index",
+    "type": "recipe",
+    "href": "#search",
+    "summary": "A static intelligence pack that precomputes a public-safe JSON index over",
+    "tags": [
+      "search-index",
+      "section-recipe",
+      "recipe"
+    ]
+  },
+  {
+    "title": "Site contract",
+    "type": "artifact",
+    "href": "https://github.com/castiliad/nocturne-signal/blob/main/.agent/site.contract.yaml",
+    "summary": "Defines mission, required sections, allowed claims, approval boundaries, and live verification expectations.",
+    "tags": [
+      "artifact",
+      "contracts",
+      "guardrails",
+      "agents"
+    ]
+  },
+  {
+    "title": "Brand contract",
+    "type": "artifact",
+    "href": "https://github.com/castiliad/nocturne-signal/blob/main/.agent/brand.contract.yaml",
+    "summary": "Captures tone, visual posture, accessibility posture, and language future agents should avoid.",
+    "tags": [
+      "artifact",
+      "brand",
+      "voice",
+      "guardrails"
+    ]
+  },
+  {
+    "title": "QA command suite",
+    "type": "artifact",
+    "href": "https://github.com/castiliad/nocturne-signal/blob/main/package.json",
+    "summary": "Runs contract, claims, SEO, link, artifact, build, and visual checks before handoff.",
+    "tags": [
+      "artifact",
+      "qa",
+      "build",
+      "verification"
+    ]
+  },
+  {
+    "title": "Deploy verifier",
+    "type": "artifact",
+    "href": "https://github.com/castiliad/nocturne-signal/blob/main/scripts/verify-deploy.mjs",
+    "summary": "Checks the live GitHub Pages URL for stable expected text after deployment.",
+    "tags": [
+      "artifact",
+      "deploy",
+      "github-pages",
+      "verification"
+    ]
+  },
+  {
+    "title": "Initial build plan",
+    "type": "artifact",
+    "href": "https://github.com/castiliad/nocturne-signal/blob/main/.hermes/plans/initial-site-build.md",
+    "summary": "Records the original brief, assumptions, non-goals, acceptance criteria, and verification commands.",
+    "tags": [
+      "artifact",
+      "plan",
+      "handoff",
+      "agents"
+    ]
+  },
+  {
+    "title": "Recipe registry",
+    "type": "artifact",
+    "href": "https://github.com/castiliad/nocturne-signal/blob/main/.agent/recipes/README.md",
+    "summary": "Documents reusable archetypes and section recipes future agents can score before applying.",
+    "tags": [
+      "artifact",
+      "recipes",
+      "patterns",
+      "agents"
+    ]
+  },
+  {
+    "title": "Static deploy evidence",
+    "type": "artifact",
+    "href": "#proof",
+    "summary": "GitHub Pages publishes the built output and npm run verify:deploy checks the live URL after deployment.",
+    "tags": [
+      "artifact",
+      "proof",
+      "evidence"
+    ]
+  },
+  {
+    "title": "Agent contracts",
+    "type": "artifact",
+    "href": "#proof",
+    "summary": ".agent/site.contract.yaml and .agent/brand.contract.yaml define the mission, allowed claims, forbidden claims, visual posture, and approval boundaries.",
+    "tags": [
+      "artifact",
+      "proof",
+      "evidence"
+    ]
+  },
+  {
+    "title": "Local QA gates",
+    "type": "artifact",
+    "href": "#proof",
+    "summary": "npm run qa and npm run qa:full validate contracts, claims, links, generated indexes, build output, and browser-visible behavior.",
+    "tags": [
+      "artifact",
+      "proof",
+      "evidence"
+    ]
+  },
+  {
+    "title": "Tighten recipe selection",
+    "type": "roadmap",
+    "href": "#roadmap",
+    "summary": "Keep selector rules deterministic as more section recipes compose together. Add a regression config whenever selector behavior changes.",
+    "tags": [
+      "roadmap",
+      "now",
+      "high",
+      "recipes",
+      "qa"
+    ]
+  },
+  {
+    "title": "Local-first user overrides",
+    "type": "roadmap",
+    "href": "#roadmap",
+    "summary": "Let visitors locally move roadmap cards without implying shared task updates. Use localStorage for browser-only status overrides and keep durable changes in JSON.",
+    "tags": [
+      "roadmap",
+      "next",
+      "high",
+      "local-first",
+      "browser"
+    ]
+  },
+  {
+    "title": "Static intelligence index",
+    "type": "roadmap",
+    "href": "#roadmap",
+    "summary": "Generate precomputed indexes that make static sites feel more queryable. Prototype a JSON index from recipe, artifact, and roadmap metadata.",
+    "tags": [
+      "roadmap",
+      "later",
+      "medium",
+      "search",
+      "data"
+    ]
+  },
+  {
+    "title": "Autonomous maintenance cadence",
+    "type": "roadmap",
+    "href": "#roadmap",
+    "summary": "Define when recurring agents may propose changes without adding notification noise. Approve a quiet schedule and escalation boundaries before automation.",
+    "tags": [
+      "roadmap",
+      "blocked",
+      "medium",
+      "orchestration",
+      "approval"
+    ]
+  },
+  {
+    "title": "Static deploy evidence follow-up",
+    "type": "roadmap",
+    "href": "#roadmap",
+    "summary": "GitHub Pages publishes the built output and npm run verify:deploy checks the live URL after deployment. Keep this proof item linked to a real repo artifact before strengthening copy.",
+    "tags": [
+      "roadmap",
+      "now",
+      "high",
+      "proof",
+      "handoff"
+    ]
+  },
+  {
+    "title": "Agent contracts follow-up",
+    "type": "roadmap",
+    "href": "#roadmap",
+    "summary": ".agent/site.contract.yaml and .agent/brand.contract.yaml define the mission, allowed claims, forbidden claims, visual posture, and approval boundaries. Keep this proof item linked to a real repo artifact before strengthening copy.",
+    "tags": [
+      "roadmap",
+      "next",
+      "medium",
+      "proof",
+      "handoff"
+    ]
+  },
+  {
+    "title": "Initial site build plan: Nocturne Signal",
+    "type": "plan",
+    "href": "#proof",
+    "summary": "Initial site build plan: Nocturne Signal Request Create a dark, edgy, technical GitHub Pages static site for a personal AI/operator lab. It should feel like a techno oracle command center: xAI style monochrome restraint,",
+    "tags": [
+      "plan",
+      "next-step"
+    ]
+  }
+]

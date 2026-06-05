@@ -1,0 +1,199 @@
+[
+  {
+    "id": "layer-1-archetype-divergence",
+    "title": "Layer 1: archetype divergence",
+    "status": "verified",
+    "layer": 1,
+    "date": "2026-05-15",
+    "orchestrator": "Hermes Agent",
+    "delegations": [
+      "Generator patch",
+      "Editorial proof publish",
+      "Visual review"
+    ],
+    "checks": [
+      "npm run qa:full",
+      "npm run check:visual-divergence",
+      "npm run verify:deploy"
+    ],
+    "commit": "eca9b19c39cdbc35a20ffd52e097232998ac6fcc",
+    "deployRun": "https://github.com/castiliad/agentsite-pilot-test/actions/runs/25954263464",
+    "outcome": "Added editorial-ledger and visual divergence guard.",
+    "nextAction": "Add richer static interactions."
+  },
+  {
+    "id": "layer-2-artifact-gallery",
+    "title": "Layer 2: artifact gallery",
+    "status": "verified",
+    "layer": 2,
+    "date": "2026-05-16",
+    "orchestrator": "Hermes Agent",
+    "delegations": [
+      "Recipe implementation",
+      "Proof site publish",
+      "Final review"
+    ],
+    "checks": [
+      "npm run qa:full",
+      "npm audit --audit-level=moderate",
+      "npm run verify:deploy"
+    ],
+    "commit": "9ce018487f7d4706db063ce14d4b5aca7b3675c7",
+    "deployRun": "https://github.com/castiliad/agentsite-pilot-test/actions/runs/25955228618",
+    "outcome": "Added searchable/filterable artifact gallery with URL tag state.",
+    "nextAction": "Add local-first roadmap state."
+  },
+  {
+    "id": "layer-3-roadmap-board",
+    "title": "Layer 3: roadmap board",
+    "status": "verified",
+    "layer": 3,
+    "date": "2026-05-16",
+    "orchestrator": "Hermes Agent",
+    "delegations": [
+      "Local-first component",
+      "Roadmap QA",
+      "Proof site publish"
+    ],
+    "checks": [
+      "npm run qa:full",
+      "npm run check:roadmap",
+      "npm run verify:deploy"
+    ],
+    "commit": "a266bd924d509e4ce6365628baf0ee0a352a9c13",
+    "deployRun": "https://github.com/castiliad/agentsite-pilot-test/actions/runs/25955525893",
+    "outcome": "Added JSON-backed roadmap board with localStorage status overrides.",
+    "nextAction": "Add precomputed static intelligence index."
+  },
+  {
+    "id": "layer-4-search-index",
+    "title": "Layer 4: search index",
+    "status": "verified",
+    "layer": 4,
+    "date": "2026-05-16",
+    "orchestrator": "Hermes Agent",
+    "delegations": [
+      "Index builder",
+      "Search UI",
+      "Visual QA"
+    ],
+    "checks": [
+      "npm run build:search-index",
+      "npm run check:search-index",
+      "npm run qa:full"
+    ],
+    "commit": "2b632ce9dd64e454291bb06ecd637d2adbf05b25",
+    "deployRun": "https://github.com/castiliad/agentsite-pilot-test/actions/runs/25955883225",
+    "outcome": "Added public-safe static search over contracts, recipes, artifacts, roadmap, and plans.",
+    "nextAction": "Add generated proof-site atlas."
+  },
+  {
+    "id": "layer-5-agentsite-atlas",
+    "title": "Layer 5: AgentSite Atlas",
+    "status": "verified",
+    "layer": 5,
+    "date": "2026-05-16",
+    "orchestrator": "Hermes Agent",
+    "delegations": [
+      "Atlas data",
+      "Atlas UI",
+      "Deploy verification"
+    ],
+    "checks": [
+      "npm run check:atlas",
+      "npm run qa:full",
+      "npm run verify:deploy"
+    ],
+    "commit": "75a23145fd1d834560165feb7f5e9b6ff50f9878",
+    "deployRun": "https://github.com/castiliad/agentsite-pilot-test/actions/runs/25956147764",
+    "outcome": "Added searchable public directory of generated proof sites and recipe coverage.",
+    "nextAction": "Model the orchestrator/subagent maintenance loop as a static run ledger."
+  },
+  {
+    "id": "layer-6-agent-run-ledger",
+    "title": "Nocturne Signal launch run",
+    "status": "verified",
+    "layer": 6,
+    "date": "2026-05-16",
+    "orchestrator": "Hermes Agent",
+    "delegations": [
+      "Run schema",
+      "Ledger UI",
+      "Run QA"
+    ],
+    "checks": [
+      "npm run check:runs",
+      "npm run qa:full"
+    ],
+    "commit": "43f0cfcfb9ea8ff45018bf5bae693e7665c2f3fd",
+    "deployRun": "https://github.com/castiliad/agentsite-pilot-test/actions/runs/25956447339",
+    "outcome": "A dark techno-oracle GitHub Pages site for presenting projects, agent workflows, artifacts, and operating principles with verified static-site boundaries.",
+    "nextAction": "Add static request intake queue."
+  },
+  {
+    "id": "layer-7-feature-request-inbox",
+    "title": "Layer 7: feature request inbox",
+    "status": "verified",
+    "layer": 7,
+    "date": "2026-05-16",
+    "orchestrator": "Hermes Agent",
+    "delegations": [
+      "Request schema",
+      "Inbox UI",
+      "Request QA"
+    ],
+    "checks": [
+      "npm run check:requests",
+      "npm run qa:full",
+      "npm run verify:deploy"
+    ],
+    "commit": "5fff83b9116db021be83480e4a1ff7e4ea7afbcd",
+    "deployRun": "https://github.com/castiliad/agentsite-pilot-test/actions/runs/25956729191",
+    "outcome": "Added public-safe feature-request inbox with status, priority, acceptance criteria, recipe candidates, verification plan, and next action.",
+    "nextAction": "Generate a chief-of-staff briefing from requests, roadmap, runs, atlas, and search index."
+  },
+  {
+    "id": "layer-8-chief-of-staff-briefing",
+    "title": "Layer 8: chief-of-staff briefing",
+    "status": "verified",
+    "layer": 8,
+    "date": "2026-05-16",
+    "orchestrator": "Hermes Agent",
+    "delegations": [
+      "Briefing builder",
+      "Executive panel UI",
+      "Briefing QA"
+    ],
+    "checks": [
+      "npm run build:briefing",
+      "npm run check:briefing",
+      "npm run qa:full"
+    ],
+    "commit": "927823b656b0dfce0b4d651441d088829b0c37da",
+    "deployRun": "https://github.com/castiliad/agentsite-pilot-test/actions/runs/25957192878",
+    "outcome": "Added generated static chief-of-staff briefing for top actions, risk flags, stale work, wins, and next recipe recommendation.",
+    "nextAction": "Add primary-surface layout so dense pages stop burying the main module."
+  },
+  {
+    "id": "layer-9-primary-surface-layout",
+    "title": "Layer 9: primary surface layout",
+    "status": "draft",
+    "layer": 9,
+    "date": "2026-05-16",
+    "orchestrator": "Hermes Agent",
+    "delegations": [
+      "Primary module ordering",
+      "Collapsible secondary modules",
+      "Layout QA"
+    ],
+    "checks": [
+      "npm run check:layout",
+      "npm run qa:full",
+      "npm run verify:deploy"
+    ],
+    "commit": "pending",
+    "deployRun": "pending",
+    "outcome": "Planned primary-first composition so selected functional modules appear before collapsible supporting modules.",
+    "nextAction": "Publish proof site and verify deploy."
+  }
+]

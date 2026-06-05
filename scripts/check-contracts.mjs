@@ -1,0 +1,59 @@
+import fs from 'node:fs';
+
+const required = [
+  'AGENTS.md',
+  '.agent/site.contract.yaml',
+  '.agent/brand.contract.yaml',
+  '.agent/payment.contract.yaml',
+  '.agent/runbooks/deploy.md',
+  '.agent/runbooks/feature-request.md',
+  '.agent/recipes/README.md',
+  '.agent/recipes/product-cockpit/recipe.yaml',
+  '.agent/recipes/product-cockpit/README.md',
+  '.agent/recipes/product-cockpit/acceptance.md',
+  '.agent/recipes/copy-evidence-strip/recipe.yaml',
+  '.agent/recipes/copy-evidence-strip/README.md',
+  '.agent/recipes/copy-evidence-strip/acceptance.md',
+  '.agent/recipes/editorial-ledger/recipe.yaml',
+  '.agent/recipes/editorial-ledger/README.md',
+  '.agent/recipes/editorial-ledger/acceptance.md',
+  '.agent/recipes/artifact-gallery/recipe.yaml',
+  '.agent/recipes/artifact-gallery/README.md',
+  '.agent/recipes/artifact-gallery/acceptance.md',
+  '.agent/recipes/roadmap-board/recipe.yaml',
+  '.agent/recipes/roadmap-board/README.md',
+  '.agent/recipes/roadmap-board/acceptance.md',
+  '.agent/recipes/search-index/recipe.yaml',
+  '.agent/recipes/search-index/README.md',
+  '.agent/recipes/search-index/acceptance.md',
+  '.agent/recipes/agentsite-atlas/recipe.yaml',
+  '.agent/recipes/agentsite-atlas/README.md',
+  '.agent/recipes/agentsite-atlas/acceptance.md',
+  '.agent/recipes/agent-run-ledger/recipe.yaml',
+  '.agent/recipes/agent-run-ledger/README.md',
+  '.agent/recipes/agent-run-ledger/acceptance.md',
+  '.agent/recipes/feature-request-inbox/recipe.yaml',
+  '.agent/recipes/feature-request-inbox/README.md',
+  '.agent/recipes/feature-request-inbox/acceptance.md',
+  '.agent/recipes/chief-of-staff-briefing/recipe.yaml',
+  '.agent/recipes/chief-of-staff-briefing/README.md',
+  '.agent/recipes/chief-of-staff-briefing/acceptance.md',
+  '.agent/recipes/primary-surface-layout/recipe.yaml',
+  '.agent/recipes/primary-surface-layout/README.md',
+  '.agent/recipes/primary-surface-layout/acceptance.md',
+  '.hermes/plans/initial-site-build.md'
+];
+
+const missing = required.filter((file) => !fs.existsSync(file));
+if (missing.length) {
+  console.error(`Missing required contract files:\n${missing.join('\n')}`);
+  process.exit(1);
+}
+
+const payment = fs.readFileSync('.agent/payment.contract.yaml', 'utf8');
+if (!/mode:\s*disabled/.test(payment) || !/no-payment/.test(payment)) {
+  console.error('Payment contract must stay in disabled/no-payment mode.');
+  process.exit(1);
+}
+
+console.log(`contract check passed (${required.length} files, payment disabled)`);
