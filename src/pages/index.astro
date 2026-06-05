@@ -6,6 +6,7 @@ import SearchIndex from '../components/SearchIndex.astro';
 import AgentRunLedger from '../components/AgentRunLedger.astro';
 import RoadmapBoard from '../components/RoadmapBoard.astro';
 import PretextOracle from '../components/PretextOracle.astro';
+import ProofChainDiagram from '../components/ProofChainDiagram.astro';
 ---
 <BaseLayout title="Nocturne Signal" description="A dark techno-oracle GitHub Pages site for presenting projects, agent workflows, artifacts, and operating principles with verified static-site boundaries.">
   <main>
@@ -84,19 +85,7 @@ import PretextOracle from '../components/PretextOracle.astro';
 <p><strong>Approval required:</strong> analytics, cookies, tracking pixels, forms, payments, lead capture, external scripts, or private project details.</p></div>
     </section>
 
-    <section class="section proof-trail" id="proof-trail">
-      <div class="section-heading">
-        <div class="section-kicker">Featured proof trail</div>
-        <h2>One claim, traced through the static operating envelope.</h2>
-        <p>Instead of asking visitors to trust a wall of cards, the page now spotlights the verification chain future agents should preserve.</p>
-      </div>
-      <div class="proof-trail-grid">
-        <article class="cockpit-card"><span class="card-label">01 · Claim</span><h3>Static GitHub Pages delivery</h3><p>The site is a public static surface, not a live private dashboard or analytics collector.</p></article>
-        <article class="cockpit-card"><span class="card-label">02 · Contract</span><h3>Approval boundaries</h3><p>Repo contracts define allowed claims, forbidden claims, no-payment mode, and edits that require explicit approval.</p></article>
-        <article class="cockpit-card"><span class="card-label">03 · QA</span><h3>Local gates</h3><p>Contract, claim, SEO, link, artifact, roadmap, index, ledger, layout, and build checks run before handoff.</p></article>
-        <article class="cockpit-card"><span class="card-label">04 · Deploy</span><h3>Live verification</h3><p>The deploy verifier checks the GitHub Pages URL for expected text after publication.</p></article>
-      </div>
-    </section>
+    <ProofChainDiagram />
 
     <section class="section primary-surface-layout" id="primary-surface" data-primary-surface="artifacts">
       <div class="section-heading">
@@ -140,10 +129,10 @@ import PretextOracle from '../components/PretextOracle.astro';
 
       <div class="experiment-grid" aria-label="Static site experiments">
         <article class="experiment-card featured-experiment">
-          <span class="experiment-status">Next · ready</span>
+          <span class="experiment-status">Promoted · active</span>
           <h3>Proof-chain diagram</h3>
-          <p>Turn the claim → contract → QA → deploy path into a visual system map so visitors understand the AgentSite operating envelope faster.</p>
-          <dl><div><dt>Skills</dt><dd>architecture-diagram · p5js</dd></div><div><dt>Recipes</dt><dd>copy-evidence-strip · primary-surface-layout</dd></div><div><dt>Promotion test</dt><dd>Improves clarity without adding runtime complexity.</dd></div></dl>
+          <p>The claim → contract → QA → deploy → live path now appears as a visual system map so visitors understand the AgentSite operating envelope faster.</p>
+          <dl><div><dt>Skills</dt><dd>architecture-diagram · static SVG</dd></div><div><dt>Recipes</dt><dd>copy-evidence-strip · primary-surface-layout</dd></div><div><dt>Promotion result</dt><dd>Graduated because it improves clarity without adding runtime complexity.</dd></div></dl>
         </article>
         <article class="experiment-card">
           <span class="experiment-status">Motion study</span>

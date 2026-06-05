@@ -20,6 +20,7 @@ required_sections:
   - "systems"
   - "handoff"
   - "boundaries"
+  - "proof_chain_diagram"
   - "artifacts"
   - "secondary_archive"
   - "pattern_lab"
@@ -52,6 +53,7 @@ content_rules:
     - "Agent-maintainable contracts and runbooks"
     - "No analytics, cookies, tracking, payment, or server runtime"
     - "Public-safe static-site experiments mapped to skills, recipes, and promotion rules"
+    - "Static proof-chain diagram mapping claim to contract to QA to deploy to live verification"
   must_not_include:
     - "fake customer testimonials"
     - "fake usage metrics or benchmark numbers"

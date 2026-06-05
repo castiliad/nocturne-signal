@@ -336,6 +336,16 @@
     ]
   },
   {
+    "title": "Proof-chain diagram iteration",
+    "type": "plan",
+    "href": "#proof",
+    "summary": "Proof chain diagram iteration Request Proceed with the next Pattern Lab iteration. The lab marked \"Proof chain diagram\" as next ready: turn claim → contract → QA → deploy into a visual system map so visitors understand t",
+    "tags": [
+      "plan",
+      "next-step"
+    ]
+  },
+  {
     "title": "Static Site Pattern Lab iteration",
     "type": "plan",
     "href": "#proof",
