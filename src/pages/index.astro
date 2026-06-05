@@ -12,7 +12,7 @@ import PretextOracle from '../components/PretextOracle.astro';
     <section class="hero cockpit-shell" id="top">
       <nav class="nav" aria-label="Primary navigation">
         <a class="brand" href="#top" aria-label="Nocturne Signal home"><span class="brand-mark">N</span><span>Nocturne Signal</span></a>
-        <div class="nav-links"><a href="#context">Context</a><a href="#panels">Panels</a><a href="#proof">Proof</a><a href="#boundaries">Boundaries</a></div>
+        <div class="nav-links"><a href="#context">Context</a><a href="#lab">Lab</a><a href="#panels">Panels</a><a href="#proof">Proof</a><a href="#boundaries">Boundaries</a></div>
       </nav>
 
       <div class="hero-grid">
@@ -126,6 +126,75 @@ import PretextOracle from '../components/PretextOracle.astro';
           <summary><span>Agent run ledger</span><strong>Open the orchestration trail, deploy evidence, and checks when needed.</strong></summary>
           <AgentRunLedger />
         </details>
+      </div>
+    </section>
+
+    <section class="section pattern-lab" id="lab">
+      <div class="pattern-lab-hero">
+        <div>
+          <div class="section-kicker">Static Site Pattern Lab</div>
+          <h2>A canvas for testing skills, recipes, and agent-built polish.</h2>
+        </div>
+        <p>Nocturne Signal now tracks the experiments we want to try, the skills that can drive them, and the promotion rules that keep the live page sharp instead of chaotic.</p>
+      </div>
+
+      <div class="experiment-grid" aria-label="Static site experiments">
+        <article class="experiment-card featured-experiment">
+          <span class="experiment-status">Next · ready</span>
+          <h3>Proof-chain diagram</h3>
+          <p>Turn the claim → contract → QA → deploy path into a visual system map so visitors understand the AgentSite operating envelope faster.</p>
+          <dl><div><dt>Skills</dt><dd>architecture-diagram · p5js</dd></div><div><dt>Recipes</dt><dd>copy-evidence-strip · primary-surface-layout</dd></div><div><dt>Promotion test</dt><dd>Improves clarity without adding runtime complexity.</dd></div></dl>
+        </article>
+        <article class="experiment-card">
+          <span class="experiment-status">Motion study</span>
+          <h3>Kinetic signal layer</h3>
+          <p>Use restrained motion to make the command surface feel alive while preserving reduced-motion support and readable content.</p>
+          <dl><div><dt>Skills</dt><dd>pretext · gsap · p5js</dd></div><div><dt>Recipes</dt><dd>product-cockpit</dd></div><div><dt>Promotion test</dt><dd>Delight increases; contrast, performance, and accessibility stay clean.</dd></div></dl>
+        </article>
+        <article class="experiment-card">
+          <span class="experiment-status">Design bakeoff</span>
+          <h3>One section, three visual systems</h3>
+          <p>Render the same proof section as dark cockpit, editorial ledger, and premium SaaS to learn what each approach communicates.</p>
+          <dl><div><dt>Skills</dt><dd>claude-design · popular-web-designs · sketch</dd></div><div><dt>Recipes</dt><dd>product-cockpit · editorial-ledger</dd></div><div><dt>Promotion test</dt><dd>The best variant wins on scan speed, credibility, and taste.</dd></div></dl>
+        </article>
+        <article class="experiment-card">
+          <span class="experiment-status">Media pack</span>
+          <h3>Generated visual asset gallery</h3>
+          <p>Create a consistent Nocturne visual pack and publish prompts, model notes, and selected outputs as inspectable artifacts.</p>
+          <dl><div><dt>Skills</dt><dd>swarmui-zimage-api · comfy-workbench · codex-imagegen</dd></div><div><dt>Recipes</dt><dd>artifact-gallery · search-index</dd></div><div><dt>Promotion test</dt><dd>Assets add atmosphere without replacing verifiable proof.</dd></div></dl>
+        </article>
+        <article class="experiment-card">
+          <span class="experiment-status">Video trail</span>
+          <h3>Site-to-video trailer</h3>
+          <p>Use the site itself as source material for a short launch-style explainer that demonstrates HTML-as-motion-design workflows.</p>
+          <dl><div><dt>Skills</dt><dd>hyperframes · gsap</dd></div><div><dt>Recipes</dt><dd>agent-run-ledger · artifact-gallery</dd></div><div><dt>Promotion test</dt><dd>The video becomes a static artifact with source, render notes, and QA evidence.</dd></div></dl>
+        </article>
+        <article class="experiment-card">
+          <span class="experiment-status">Learning loop</span>
+          <h3>Request inbox and lesson ledger</h3>
+          <p>Track future ideas, decisions, failures, and wins so the site becomes a living notebook for agent-maintained static pages.</p>
+          <dl><div><dt>Skills</dt><dd>agentsite-workflow · subagent-driven-development</dd></div><div><dt>Recipes</dt><dd>feature-request-inbox · agent-run-ledger · chief-of-staff-briefing</dd></div><div><dt>Promotion test</dt><dd>Useful signal accumulates without burying the landing page.</dd></div></dl>
+        </article>
+      </div>
+
+      <div class="skill-matrix" aria-label="Skill to site capability matrix">
+        <div class="matrix-heading">
+          <div class="section-kicker">Skill matrix</div>
+          <h3>Which skills unlock which static-site behaviors?</h3>
+        </div>
+        <div class="matrix-grid">
+          <div><strong>pretext</strong><span>Kinetic typography, text fields, terminal aura, cursor-reactive hero surfaces.</span></div>
+          <div><strong>p5js</strong><span>Generative diagrams, proof constellations, particle/radar systems, interactive canvases.</span></div>
+          <div><strong>gsap</strong><span>Scroll reveals, proof-chain motion, panel transitions, and reduced-motion-aware polish.</span></div>
+          <div><strong>architecture-diagram</strong><span>Static SVG maps for contracts, QA gates, deploy flows, and recipe relationships.</span></div>
+          <div><strong>hyperframes</strong><span>HTML-to-video trailers, animated walkthroughs, social clips, and motion-design artifacts.</span></div>
+          <div><strong>swarmui-zimage-api</strong><span>Generated image packs, style explorations, model comparisons, and prompt-to-artifact galleries.</span></div>
+        </div>
+      </div>
+
+      <div class="promotion-rules">
+        <div class="section-kicker">Promotion rule</div>
+        <p>An experiment graduates into the primary page only when it improves <strong>clarity</strong>, <strong>delight</strong>, or <strong>maintainability</strong> without violating static safety: no analytics, no forms, no backend, no fake proof, and no private data.</p>
       </div>
     </section>
 

@@ -22,6 +22,8 @@ required_sections:
   - "boundaries"
   - "artifacts"
   - "secondary_archive"
+  - "pattern_lab"
+  - "skill_matrix"
   - "search"
   - "runs"
   - "proof"
@@ -49,6 +51,7 @@ content_rules:
     - "Repo-local QA and deploy verification"
     - "Agent-maintainable contracts and runbooks"
     - "No analytics, cookies, tracking, payment, or server runtime"
+    - "Public-safe static-site experiments mapped to skills, recipes, and promotion rules"
   must_not_include:
     - "fake customer testimonials"
     - "fake usage metrics or benchmark numbers"
