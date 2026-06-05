@@ -101,7 +101,7 @@
   {
     "title": "Primary Surface Layout",
     "type": "recipe",
-    "href": "#proof",
+    "href": "#secondary-modules",
     "summary": "Places the selected primary functional module immediately after the hero/context",
     "tags": [
       "primary-surface-layout",
@@ -323,6 +323,16 @@
       "medium",
       "proof",
       "handoff"
+    ]
+  },
+  {
+    "title": "Nocturne Signal primary-surface polish",
+    "type": "plan",
+    "href": "#proof",
+    "summary": "Nocturne Signal primary surface polish Request Proceed with the next iteration after live review found that the hero/opening stayed strong but the page drifted into a dense proof dashboard lower down. Assumptions Preserv",
+    "tags": [
+      "plan",
+      "next-step"
     ]
   },
   {
